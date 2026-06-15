@@ -1,0 +1,17 @@
+{
+  "name": "perennial-longevity-sandbox",
+  "version": "1.0.0",
+  "description": "An interactive design workbench inspired by Ryan Holiday's Perennial Seller, modernized with vibe coding and WebMCP client-side tools.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "npx -y serve . -l 8085"
+  },
+  "keywords": [
+    "perennial-seller",
+    "vibe-coding",
+    "webmcp",
+    "agentic-web"
+  ],
+  "author": "Antigravity Agent",
+  "license": "MIT"
+}

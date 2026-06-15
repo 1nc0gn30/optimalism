@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optimalism: The Longevity Sandbox</title>
+  <meta name="description" content="Optimalism is an interactive design workbench based on Ryan Holiday's 'Perennial Seller', modernized for the co-creation and WebMCP AI agent era. Create digital products that last.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://optimalism.netlify.app">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://optimalism.netlify.app">
+  <meta property="og:title" content="Optimalism: The Longevity Sandbox">
+  <meta property="og:description" content="Interactive blueprint workbench based on Ryan Holiday's 'Perennial Seller'. Modernized with vibe-coding, co-creator agents, and WebMCP API tools. Build things that last.">
+  <meta property="og:image" content="https://optimalism.netlify.app/assets/og-image.png">
+  <meta property="og:site_name" content="Optimalism">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://optimalism.netlify.app">
+  <meta name="twitter:title" content="Optimalism: The Longevity Sandbox">
+  <meta name="twitter:description" content="Interactive blueprint workbench based on Ryan Holiday's 'Perennial Seller'. Modernized with vibe-coding, co-creator agents, and WebMCP API tools. Build things that last.">
+  <meta name="twitter:image" content="https://optimalism.netlify.app/assets/og-image.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="bg-glow bg-glow-gold" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-cyan" aria-hidden="true"></div>
+
+  <!-- Parallax mesh layers -->
+  <div class="parallax-bg-image parallax-layer-1" aria-hidden="true"></div>
+  <div class="parallax-bg-image parallax-layer-2" aria-hidden="true"></div>
+
+  <!-- Onboarding Dialog Modal -->
+  <dialog id="onboarding-dialog" closedby="any" aria-labelledby="onboarding-title">
+    <div class="onboarding-inner">
+      <!-- Close button (always visible at top right) -->
+      <form method="dialog">
+        <button type="submit" class="onboarding-close-icon-btn" aria-label="Close onboarding instructions">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </form>
+
+      <!-- Scrollable content area -->
+      <div class="onboarding-scroll-content">
+        <div class="onboarding-hero">
+          <svg class="onboarding-svg" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Orbital rings -->
+            <ellipse cx="100" cy="80" rx="85" ry="35" stroke="hsla(38,90%,55%,0.4)" stroke-width="1.2" stroke-dasharray="6 4"/>
+            <ellipse cx="100" cy="80" rx="60" ry="55" stroke="hsla(180,85%,48%,0.35)" stroke-width="1" stroke-dasharray="4 6" transform="rotate(25 100 80)"/>
+            <!-- Central node -->
+            <circle cx="100" cy="80" r="18" fill="hsla(38,90%,55%,0.12)" stroke="hsla(38,90%,55%,0.6)" stroke-width="1.5"/>
+            <circle cx="100" cy="80" r="6" fill="hsla(38,90%,55%,0.8)"/>
+            <!-- Satellite nodes -->
+            <circle cx="32" cy="65" r="5" fill="hsla(180,85%,48%,0.3)" stroke="hsla(180,85%,48%,0.5)" stroke-width="1"/>
+            <circle cx="168" cy="95" r="5" fill="hsla(180,85%,48%,0.3)" stroke="hsla(180,85%,48%,0.5)" stroke-width="1"/>
+            <circle cx="55" cy="120" r="4" fill="hsla(145,70%,55%,0.3)" stroke="hsla(145,70%,55%,0.5)" stroke-width="1"/>
+            <circle cx="145" cy="40" r="4" fill="hsla(145,70%,55%,0.3)" stroke="hsla(145,70%,55%,0.5)" stroke-width="1"/>
+            <!-- Connection lines -->
+            <line x1="100" y1="80" x2="32" y2="65" stroke="hsla(180,85%,48%,0.15)" stroke-width="0.8"/>
+            <line x1="100" y1="80" x2="168" y2="95" stroke="hsla(180,85%,48%,0.15)" stroke-width="0.8"/>
+            <line x1="100" y1="80" x2="55" y2="120" stroke="hsla(145,70%,55%,0.1)" stroke-width="0.8"/>
+            <line x1="100" y1="80" x2="145" y2="40" stroke="hsla(145,70%,55%,0.1)" stroke-width="0.8"/>
+            <!-- Labels -->
+            <text x="100" y="150" fill="hsla(210,25%,96%,0.3)" font-size="7" font-family="Outfit" text-anchor="middle" letter-spacing="3">PERENNIAL FRAMEWORK</text>
+          </svg>
+        </div>
+
+        <h2 id="onboarding-title">Welcome to the Longevity Sandbox</h2>
+        <p class="onboarding-lead">An interactive workbench for building digital products that <strong>last decades</strong>, not days. Inspired by Ryan Holiday&rsquo;s <em>Perennial Seller</em>, modernized for the 2026 vibe-coding era.</p>
+
+        <div class="onboarding-features">
+          <div class="onboarding-feature">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="hsl(38,90%,55%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <div>
+              <strong>4-Phase Blueprint Workbench</strong>
+              <p>Walk through Holiday&rsquo;s four stages: Creative Process, Positioning, Marketing, and Platform Longevity.</p>
+            </div>
+          </div>
+          <div class="onboarding-feature">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="hsl(180,85%,48%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+            <div>
+              <strong>AI Vibe-Coder Simulator</strong>
+              <p>Trigger a simulated co-creator agent that stress-tests your project and scores its perennial viability.</p>
+            </div>
+          </div>
+          <div class="onboarding-feature">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="hsl(145,70%,55%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <div>
+              <strong>2026 WebMCP Agent Gateway</strong>
+              <p>Client-side tools exposed via the WebMCP protocol, letting real AI agents inspect and optimize your project.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="onboarding-audience">
+          <span class="audience-badge">WHO IS THIS FOR?</span>
+          <p>Indie builders, startup founders, solopreneurs, and creators who refuse to ship disposable products. If you believe in making money through optimism and value&mdash;not cynicism&mdash;this is your sandbox.</p>
+        </div>
+      </div>
+
+      <!-- Footer Action (always visible) -->
+      <div class="onboarding-footer">
+        <form method="dialog">
+          <button type="submit" class="btn btn-primary onboarding-cta" id="onboarding-enter-btn">
+            Enter the Sandbox
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </form>
+        <p class="onboarding-dismiss-hint">Click outside or press <kbd>Esc</kbd> to close</p>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="app-container">
+    <header class="app-header">
+      <div class="header-logo-section">
+        <div class="logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <h1>OPTIMALISM</h1>
+          <p class="tagline">The Longevity Sandbox &bull; Inspired by Ryan Holiday</p>
+        </div>
+      </div>
+      
+      <!-- Mindset Gauge -->
+      <div class="mindset-gauge-card">
+        <div class="gauge-header">
+          <span class="gauge-label">PROJECT MINDSET PROFILE</span>
+          <span class="gauge-value" id="gauge-value-text">Optimist Mode</span>
+        </div>
+        <div class="gauge-bar-container">
+          <div class="gauge-labels">
+            <span>PESSIMIST <small>(Sounds Smart)</small></span>
+            <span>OPTIMIST <small>(Creates Value)</small></span>
+          </div>
+          <div class="gauge-track">
+            <div class="gauge-fill" id="gauge-fill-bar" style="width: 75%;"></div>
+            <div class="gauge-needle" id="gauge-needle" style="left: 75%;"></div>
+          </div>
+        </div>
+        <div class="gauge-footer" id="gauge-status-desc">
+          Refining value, building real assets. High success potential.
+        </div>
+      </div>
+    </header>
+
+    <!-- Decorative SVG Divider: Converging Lines -->
+    <div class="svg-divider" aria-hidden="true">
+      <svg viewBox="0 0 600 30" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="15" x2="260" y2="15" stroke="hsla(38,90%,55%,0.2)" stroke-width="1"/>
+        <circle cx="280" cy="15" r="3" fill="hsla(38,90%,55%,0.5)"/>
+        <line x1="285" y1="15" x2="315" y2="15" stroke="hsla(180,85%,48%,0.35)" stroke-width="1.5"/>
+        <circle cx="320" cy="15" r="3" fill="hsla(180,85%,48%,0.5)"/>
+        <line x1="340" y1="15" x2="600" y2="15" stroke="hsla(38,90%,55%,0.2)" stroke-width="1"/>
+      </svg>
+    </div>
+
+    <main class="main-layout">
+      <!-- Left Column: The 4-Phase Workbench -->
+      <section class="workbench-section card">
+        <div class="card-header">
+          <h2 class="card-title">PROJECT BLUEPRINT WORKBENCH</h2>
+          <p class="card-subtitle">Tune the structural dials of your digital product</p>
+        </div>
+
+        <!-- Tab Controls -->
+        <nav class="workbench-tabs" aria-label="Workbench Phases">
+          <button class="tab-btn active" data-tab="creative-tab" id="btn-creative-tab">
+            <span class="tab-num">01</span> The Masterpiece
+          </button>
+          <button class="tab-btn" data-tab="positioning-tab" id="btn-positioning-tab">
+            <span class="tab-num">02</span> Packaging
+          </button>
+          <button class="tab-btn" data-tab="marketing-tab" id="btn-marketing-tab">
+            <span class="tab-num">03</span> The Launch
+          </button>
+          <button class="tab-btn" data-tab="longevity-tab" id="btn-longevity-tab">
+            <span class="tab-num">04</span> Platform
+          </button>
+        </nav>
+
+        <!-- Tab Contents -->
+        <div class="workbench-content">
+          <!-- Phase 1: Creative Process -->
+          <div class="tab-pane active" id="creative-tab">
+            <h3>Phase 1: The Creative Process</h3>
+            <details class="educational-disclosure" name="workbench-edu-guide">
+              <summary>
+                <span class="edu-title">Evergreen Masterpiece Guide</span>
+                <span class="edu-toggle-icon">↓</span>
+              </summary>
+              <div class="edu-body">
+                <p><strong>Masterpiece Heuristic</strong>: To build something that lasts, you must reject short-term hacks. Spend significant time crafting deep utility rather than chasing a quick hype cycle.</p>
+                <ul>
+                  <li><strong>Time Investment</strong>: Real masterpieces aren't built in a weekend. Commit to depth and longevity.</li>
+                  <li><strong>Enduring Utility</strong>: Solve an acute, structural human or business problem, not a temporary technical gap.</li>
+                  <li><strong>Value-First Optimism</strong>: Make value to make money. Reject defensive cynicism.</li>
+                </ul>
+              </div>
+            </details>
+            
+            <div class="form-group">
+              <label for="project-name">Project Name</label>
+              <input type="text" id="project-name" class="form-input" placeholder="e.g., SwiftRecruits" value="InnovatorHub">
+            </div>
+
+            <div class="form-group">
+              <label for="project-problem">What real problem does it solve?</label>
+              <textarea id="project-problem" class="form-input" rows="3" placeholder="Describe the acute pain point your target audience suffers from...">AI agents are isolated; we build a secure, real-time shared workspace canvas for developers and agents to visual-code collaboratively without context limits.</textarea>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="time-commitment">Time Invested / Expected Crafting Time</label>
+                <select id="time-commitment" class="form-input">
+                  <option value="1-week">1 Week (Hackathon toy)</option>
+                  <option value="1-month">1 Month (Cool wrapper)</option>
+                  <option value="6-months" selected>6 Months (Deep craftsmanship)</option>
+                  <option value="2-years">2+ Years (Life's work)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="utility-vs-hype">Value Focus</label>
+                <div class="slider-container">
+                  <input type="range" id="utility-vs-hype" min="0" max="100" value="80" class="form-slider">
+                  <div class="slider-labels">
+                    <span>Pure Hype</span>
+                    <span>High Utility</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 2: Positioning & Packaging -->
+          <div class="tab-pane" id="positioning-tab">
+            <h3>Phase 2: Positioning & Packaging</h3>
+            <details class="educational-disclosure" name="workbench-edu-guide">
+              <summary>
+                <span class="edu-title">Evergreen Positioning Guide</span>
+                <span class="edu-toggle-icon">↓</span>
+              </summary>
+              <div class="edu-body">
+                <p><strong>Positioning Rule</strong>: Wrap your work in a single sentence that hits like a hammer. You must know exactly who your product is for and what it does.</p>
+                <ul>
+                  <li><strong>The One-Sentence Hook</strong>: If you cannot explain the value proposition in one direct sentence, you do not understand it.</li>
+                  <li><strong>Niche Focus</strong>: Win a devoted, passionate core group first. Do not dilute your product trying to appeal to a broad, indifferent market.</li>
+                  <li><strong>Simplicity</strong>: Over-engineered structures fail. Keep your logic direct and focused on the core promise.</li>
+                </ul>
+              </div>
+            </details>
+
+            <div class="form-group">
+              <label for="one-sentence-hook">The One-Sentence Hook (Value Proposition)</label>
+              <textarea id="one-sentence-hook" class="form-input" rows="2" placeholder="e.g., The email client that restores sanity to professional communication.">A collaborative visual browser canvas allowing AI agents and human developers to co-create web systems side-by-side in real time.</textarea>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="target-audience">Audience Focus</label>
+                <select id="target-audience" class="form-input">
+                  <option value="indifferent-broad">Broad & Indifferent (For everyone)</option>
+                  <option value="niche-devoted" selected>Niche & Devoted (A passionate core)</option>
+                  <option value="single-buyer">Single Enterprise Buyer (B2B Whale)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="simplicity-score">Complexity Level</label>
+                <div class="slider-container">
+                  <input type="range" id="simplicity-score" min="0" max="100" value="85" class="form-slider">
+                  <div class="slider-labels">
+                    <span>Over-engineered</span>
+                    <span>Simple & Direct</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 3: The Launch -->
+          <div class="tab-pane" id="marketing-tab">
+            <h3>Phase 3: Marketing & The Launch</h3>
+            <details class="educational-disclosure" name="workbench-edu-guide">
+              <summary>
+                <span class="edu-title">Evergreen Distribution Guide</span>
+                <span class="edu-toggle-icon">↓</span>
+              </summary>
+              <div class="edu-body">
+                <p><strong>Distribution Rule</strong>: Avoid wasting resources on rented media, transient PR campaigns, or paid hype. Focus on building assets you own and fostering direct user connections.</p>
+                <ul>
+                  <li><strong>Owned Media Pipelines</strong>: Establish direct lines (e.g., newsletters, private communities) to your audience.</li>
+                  <li><strong>Word-of-Mouth Potential</strong>: Design your product so that the usage itself encourages sharing. An outstanding product is its own best marketing.</li>
+                  <li><strong>Long-Tail Consistency</strong>: The launch is just one day. Build a system that compoundingly attracts users over years, not weeks.</li>
+                </ul>
+              </div>
+            </details>
+
+            <div class="form-group">
+              <label>Primary Acquisition Channel</label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input type="radio" name="marketing-channel" value="direct" checked>
+                  <span class="radio-custom"></span>
+                  <div>
+                    <strong>Direct Connection</strong>
+                    <p>Build an email newsletter, community, and word-of-mouth referral system. (Owned media)</p>
+                  </div>
+                </label>
+                
+                <label class="radio-label">
+                  <input type="radio" name="marketing-channel" value="rented">
+                  <span class="radio-custom"></span>
+                  <div>
+                    <strong>Rented Traffic</strong>
+                    <p>Rely on Product Hunt launch, Twitter influencers, and paid Google Ads. (Transient focus)</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="mouth-referrals">Word-of-Mouth Organic Potential</label>
+                <div class="slider-container">
+                  <input type="range" id="mouth-referrals" min="0" max="100" value="75" class="form-slider">
+                  <div class="slider-labels">
+                    <span>None (Push Sales)</span>
+                    <span>Highly Virally Shareable</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 4: Longevity & Platform -->
+          <div class="tab-pane" id="longevity-tab">
+            <h3>Phase 4: Platform & Longevity</h3>
+            <details class="educational-disclosure" name="workbench-edu-guide">
+              <summary>
+                <span class="edu-title">Evergreen Platform Guide</span>
+                <span class="edu-toggle-icon">↓</span>
+              </summary>
+              <div class="edu-body">
+                <p><strong>Platform Rule</strong>: A single product is highly vulnerable. Expand your work into an ecosystem. Create a suite of related utilities and plan on a ten-year horizon.</p>
+                <ul>
+                  <li><strong>Ecosystem Extensions</strong>: Expand your core product with APIs, integrations, or developer toolchains.</li>
+                  <li><strong>The Ten-Year Test</strong>: Ask yourself: "Will this solve a problem that still exists in a decade?" If not, pivot to a fundamental human need.</li>
+                  <li><strong>System Autonomy</strong>: Design self-sufficiency and low maintenance overhead so you can focus on building the next asset.</li>
+                </ul>
+              </div>
+            </details>
+
+            <div class="form-group">
+              <label for="extension-strategy">Suite Extension Strategy</label>
+              <select id="extension-strategy" class="form-input">
+                <option value="none">Single-product silo (No ecosystem)</option>
+                <option value="content-hub">Content Platform (Books, tutorials, newsletters)</option>
+                <option value="toolchain" selected>Developer Toolchain (Plugins, API keys, agent tools)</option>
+                <option value="network">Two-sided Network (Marketplace, ecosystem directory)</option>
+              </select>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="ten-year-vision">Will this matter in 10 years?</label>
+                <select id="ten-year-vision" class="form-input">
+                  <option value="hype-tech">No, it solves a temporary tech gap</option>
+                  <option value="evolving">Maybe, if we constantly rewrite core features</option>
+                  <option value="evergreen" selected>Yes, it solves a fundamental human/process challenge</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="maintenance-factor">System Self-Sufficiency</label>
+                <div class="slider-container">
+                  <input type="range" id="maintenance-factor" min="0" max="100" value="70" class="form-slider">
+                  <div class="slider-labels">
+                    <span>High maintenance grind</span>
+                    <span>Autonomous/Passive</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="workbench-footer">
+          <button type="button" class="btn btn-secondary" id="reset-workbench-btn">Reset Defaults</button>
+          <button type="button" class="btn btn-primary" id="vibe-code-btn">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="btn-icon">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            VIBE CODE WITH CO-CREATOR
+          </button>
+        </div>
+      </section>
+
+      <!-- Decorative SVG Divider: Circuit Node -->
+      <div class="svg-divider" aria-hidden="true">
+        <svg viewBox="0 0 600 40" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 20 L230 20 L250 8 L270 32 L290 8 L310 32 L330 8 L350 20 L600 20" stroke="hsla(180,85%,48%,0.18)" stroke-width="1" fill="none"/>
+          <circle cx="300" cy="20" r="4" fill="hsla(180,85%,48%,0.4)" stroke="hsla(180,85%,48%,0.6)" stroke-width="1"/>
+        </svg>
+      </div>
+
+      <!-- Right Column: Vibe Simulator & WebMCP console -->
+      <section class="execution-section">
+        <!-- Vibe Coding Terminal Simulator -->
+        <div class="card terminal-card">
+          <div class="card-header terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">VIBE-CODER-AGENT-SIMULATOR.sh</div>
+            <div class="terminal-badge">READY</div>
+          </div>
+          
+          <div class="terminal-body" id="terminal-screen">
+            <div class="terminal-line system-msg">System initialized. Antigravity Vibe-Coder v2026.6.15 online.</div>
+            <div class="terminal-line system-msg">Agent status: Idle. Click 'VIBE CODE WITH CO-CREATOR' to analyze and co-write the project.</div>
+            <div class="terminal-line prompt-line"><span class="prompt-char">$</span> <span class="blink">_</span></div>
+          </div>
+          
+          <!-- Scorecard results overlay inside terminal or replacing it -->
+          <div class="scorecard-overlay hidden" id="scorecard-container">
+            <div class="scorecard-header">
+              <h3>PERENNIAL ANALYSIS COMPLETE</h3>
+              <button class="scorecard-close" id="close-scorecard-btn">&times;</button>
+            </div>
+            <div class="scorecard-grid">
+              <div class="score-radial-container">
+                <div class="score-circle">
+                  <svg class="score-svg" viewBox="0 0 100 100">
+                    <circle class="score-bg-circle" cx="50" cy="50" r="40"></circle>
+                    <circle class="score-fg-circle" id="score-meter-circle" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
+                  </svg>
+                  <div class="score-text">
+                    <span class="score-num" id="score-number">0</span>
+                    <span class="score-unit">%</span>
+                  </div>
+                </div>
+                <div class="score-grade-text" id="score-rating">DRAFTING</div>
+              </div>
+              
+              <div class="score-stats">
+                <div class="stat-row">
+                  <span class="stat-name">Est. 10-Yr Platform Value</span>
+                  <span class="stat-value text-gold" id="stat-projection">$0</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-name">Masterpiece Score</span>
+                  <span class="stat-value" id="stat-masterpiece">0/100</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-name">Direct Relationship Index</span>
+                  <span class="stat-value" id="stat-direct">0/100</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-name">Platform Viability</span>
+                  <span class="stat-value" id="stat-longevity">0/100</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="score-recommendation">
+              <h4>AGENT RECOMMENDATION:</h4>
+              <p id="recommendation-text">Waiting for input...</p>
+            </div>
+            
+            <div class="scorecard-footer">
+              <button class="btn btn-secondary btn-sm" id="scorecard-back-btn">View Terminal Logs</button>
+              <button class="btn btn-primary btn-sm" id="scorecard-apply-btn">Refine & Apply Recommendations</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- WebMCP Agent Console & Playground -->
+        <div class="card agent-playground-card">
+          <div class="card-header">
+            <h2 class="card-title">2026 WebMCP AGENT GATEWAY</h2>
+            <p class="card-subtitle">Expose client-side tools and simulate agent interactions</p>
+          </div>
+          
+          <div class="agent-gateway-grid">
+            <!-- Left: Registered WebMCP Tools list -->
+            <div class="registered-tools-list">
+              <h3>REGISTERED CLIENT-SIDE TOOLS</h3>
+              <div class="tool-badge-container">
+                <div class="tool-item">
+                  <div class="tool-item-header">
+                    <span class="tool-badge">tool</span>
+                    <code class="tool-name">inspect-project-state</code>
+                  </div>
+                  <p class="tool-desc">Reads current workbench configuration to inspect metrics.</p>
+                </div>
+                
+                <div class="tool-item">
+                  <div class="tool-item-header">
+                    <span class="tool-badge">tool</span>
+                    <code class="tool-name">optimize-project-hook</code>
+                  </div>
+                  <p class="tool-desc">Refines the project's positioning hook for evergreen appeal.</p>
+                </div>
+
+                <div class="tool-item">
+                  <div class="tool-item-header">
+                    <span class="tool-badge">tool</span>
+                    <code class="tool-name">inject-optimism-vibe</code>
+                  </div>
+                  <p class="tool-desc">Transforms a cynical, pessimistic concept into an optimistic value driver.</p>
+                </div>
+              </div>
+
+              <!-- Native WebMCP status -->
+              <div class="webmcp-native-indicator">
+                <span class="pulse-indicator inactive" id="webmcp-status-pulse"></span>
+                <span id="webmcp-status-text">WebMCP Emulator Running (Chrome 146+ Flag Inactive)</span>
+              </div>
+            </div>
+
+            <!-- Right: Interactive Agent Console Playground -->
+            <div class="agent-console">
+              <h3>AGENT PLAYGROUND TERMINAL</h3>
+              <p class="playground-desc">Interact with the client tools directly as if you were a 2026 AI Agent.</p>
+              
+              <div class="agent-output-screen" id="playground-screen">
+                <div class="playground-line comment"># Try commands: /inspect, /optimize, /inject-optimism, or type a pessimistic idea to convert it.</div>
+              </div>
+              
+              <!-- Declarative WebMCP Form for evaluation -->
+              <form class="agent-input-form" id="agent-playground-form"
+                    toolname="optimalism-evaluator"
+                    tooldescription="Evaluate workbench parameters and return longevity suggestions"
+                    toolautosubmit>
+                <span class="prompt-arrow">&gt;</span>
+                <input type="text" id="playground-input" class="playground-input" name="agent_command" placeholder="Enter /command or pessimistic project idea..." required autocomplete="off">
+                <button type="submit" class="playground-submit-btn" id="playground-submit-btn">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <div class="footer-left">
+        &copy; 2026 Optimalism. Built with Optimism to Make Value.
+      </div>
+      <div class="footer-right">
+        <span class="footer-vibe">"We must be optimists to make money, not pessimists to sound smart."</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
