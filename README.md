@@ -1,47 +1,59 @@
-# optimalism
+<!-- xonettn -->
+<div align="center">
+
+# 📦 Optimalism
 
 Web app to ensure vibe coders are optmistic and not pessimistic. One creates a path the other creates a blocked flow. Which will you choose?
 
-## Overview
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
+
+![Deploy](https://img.shields.io/badge/Deployed-Netlify-00C7B7?logo=netlify&logoColor=white)
+
+</div>
+
+---
+
+## 📋 Overview
 Web app to ensure vibe coders are optmistic and not pessimistic. One creates a path the other creates a blocked flow. Which will you choose?
 
-## Tech Stack
+## 📦 Tech Stack
 - CSS
 
-## Project Structure
+## 🗂️ Project Structure
 ```
 optimalism/
   - assets
   (12 files total)
 ```
 
-## Getting Started
+## 🚀 Getting Started
 
-### Prerequisites
+### 📋 Prerequisites
 - Node.js (v18+)
 - npm or yarn
 
-### Installation
+### 📦 Installation
 ```bash
 git clone https://github.com/1nc0gn30/optimalism.git
 cd optimalism
 npm install
 ```
 
-### Development
+### 💻 Development
 ```bash
 npm run dev
 ```
 
-### Build
+### 🔨 Build
 ```bash
 npm run build
 ```
 
-### Available Scripts
+### ⚙️ Available Scripts
   npm run dev - npx -y serve . -l 8085
 
-## Original README
+## 📂 Original README
 <details>
 <summary>Click to expand original README</summary>
 
@@ -85,11 +97,11 @@ An interactive design workbench inspired by Ryan Holiday's *Perennial Seller*, m
 
 ## 📦 Getting Started
 
-### Prerequisites
+### 📋 Prerequisites
 
 - Node.js (v18+)
 
-### Run Locally
+### 🚀 Run Locally
 
 1. Clone this repository:
    ```bash
@@ -111,7 +123,7 @@ This project is licensed under the MIT License.
 
 </details>
 
-## TODO / Roadmap
+## 📝 TODO / Roadmap
 - [ ] Add unit tests
 - [ ] Add LICENSE file
 - [ ] Add Dockerfile for containerized deployment
@@ -123,14 +135,22 @@ This project is licensed under the MIT License.
 - [ ] Update dependencies to latest versions
 - [ ] Add code comments and inline documentation
 
-## Deployment
+## 🚀 Deployment
 This project can be deployed to Netlify, Vercel, or any static host.
 
-## Author
+## 👤 Author
 **Neal Frazier** - [@AshAmplifies](https://github.com/1nc0gn30)
 
-## Links
+## 🔗 Links
 - GitHub: https://github.com/1nc0gn30/optimalism
 
 ---
 *This README was enhanced as part of the neals-projects-2026 batch update.*
+
+---
+
+<div align="center">
+
+**[xonettn]** · Built by [Neal Frazier](https://github.com/1nc0gn30) · [@AshAmplifies](https://twitter.com/AshAmplifies)
+
+</div>
