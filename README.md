@@ -1,9 +1,9 @@
 <!-- xonettn -->
 <div align="center">
 
-# 📦 Optimalism
+# 📦 Optimalism: The Longevity Sandbox
 
-Web app to ensure vibe coders are optmistic and not pessimistic. One creates a path the other creates a blocked flow. Which will you choose?
+An interactive design workbench inspired by Ryan Holiday's *Perennial Seller*, modernized for the 2026 co-creation and vibe-coding era. **Optimalism** helps developers and creators design digital prod
 
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
@@ -13,51 +13,6 @@ Web app to ensure vibe coders are optmistic and not pessimistic. One creates a p
 </div>
 
 ---
-
-## 📋 Overview
-Web app to ensure vibe coders are optmistic and not pessimistic. One creates a path the other creates a blocked flow. Which will you choose?
-
-## 📦 Tech Stack
-- CSS
-
-## 🗂️ Project Structure
-```
-optimalism/
-  - assets
-  (12 files total)
-```
-
-## 🚀 Getting Started
-
-### 📋 Prerequisites
-- Node.js (v18+)
-- npm or yarn
-
-### 📦 Installation
-```bash
-git clone https://github.com/1nc0gn30/optimalism.git
-cd optimalism
-npm install
-```
-
-### 💻 Development
-```bash
-npm run dev
-```
-
-### 🔨 Build
-```bash
-npm run build
-```
-
-### ⚙️ Available Scripts
-  npm run dev - npx -y serve . -l 8085
-
-## 📂 Original README
-<details>
-<summary>Click to expand original README</summary>
-
-# Optimalism: The Longevity Sandbox
 
 An interactive design workbench inspired by Ryan Holiday's *Perennial Seller*, modernized for the 2026 co-creation and vibe-coding era. **Optimalism** helps developers and creators design digital products that last decades, not days—focusing on constructive, value-creating optimism rather than defensive cynicism.
 
@@ -120,32 +75,6 @@ An interactive design workbench inspired by Ryan Holiday's *Perennial Seller*, m
 ## 📜 License
 
 This project is licensed under the MIT License.
-
-</details>
-
-## 📝 TODO / Roadmap
-- [ ] Add unit tests
-- [ ] Add LICENSE file
-- [ ] Add Dockerfile for containerized deployment
-- [ ] Add deployment configuration
-- [ ] Add CI/CD pipeline
-- [ ] Add contribution guidelines (CONTRIBUTING.md)
-- [ ] Improve error handling and edge cases
-- [ ] Add environment variable documentation
-- [ ] Update dependencies to latest versions
-- [ ] Add code comments and inline documentation
-
-## 🚀 Deployment
-This project can be deployed to Netlify, Vercel, or any static host.
-
-## 👤 Author
-**Neal Frazier** - [@AshAmplifies](https://github.com/1nc0gn30)
-
-## 🔗 Links
-- GitHub: https://github.com/1nc0gn30/optimalism
-
----
-*This README was enhanced as part of the neals-projects-2026 batch update.*
 
 ---
 
